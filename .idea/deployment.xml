@@ -5,7 +5,7 @@
       <paths name="ikt">
         <serverdata>
           <mappings>
-            <mapping deploy="/veeb" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/veeb" local="$PROJECT_DIR$" web="/veeb" />
           </mappings>
         </serverdata>
       </paths>

@@ -11,5 +11,6 @@
  * kommentaar
  */
 // väljastamine
-echo "Aine - veebiprogrammeerimine"; // käsu lõpp - ;
+echo "Aine - veebiprogrammeerimine"."<br/>"; // käsu lõpp - ;
+print "valikaine";
 ?>

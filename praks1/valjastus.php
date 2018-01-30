@@ -12,5 +12,9 @@
  */
 // väljastamine
 echo "Aine - veebiprogrammeerimine"."<br/>"; // käsu lõpp - ;
-print "valikaine";
-?>
+print "valikaine<bt/>";
+// muutujate defineerimine
+$eesNimi = "Anneli"; // eesnimi, string
+$pereNimi = "Jarvi"; // perenimi, string
+$bussiNumber = 4; // bussi number, integer
+$soiduKestvus = 0.8; // soidu kestvus, float

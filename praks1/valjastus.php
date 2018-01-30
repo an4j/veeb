@@ -35,4 +35,5 @@ if ($ilmValjas == 'Sajab lund'){
     echo 'Pole motet sauna minna<br/>';
 }
 // ? operaator - ternary operator
+$ilmValjas = 'Sajab lund';
 echo ($ilmValjas == 'Sajab lund') ? 'Tuleb minna sauna<br/>' : 'Pole motet sauna minna<br/>';

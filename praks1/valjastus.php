@@ -18,3 +18,5 @@ $eesNimi = "Anneli"; // eesnimi, string
 $pereNimi = "Jarvi"; // perenimi, string
 $bussiNumber = 4; // bussi number, integer
 $soiduKestvus = 0.8; // soidu kestvus, float
+// konstantite defineerimine
+define("NUMBER_PI", 3.13);

@@ -20,3 +20,9 @@ $bussiNumber = 4; // bussi number, integer
 $soiduKestvus = 0.8; // soidu kestvus, float
 // konstantite defineerimine
 define("NUMBER_PI", 3.13);
+/*Kasutades eel defineeritud muutujad ja konstandid
+*valjasta ilus teksti
+ */
+echo "Olen ".$eesNimi.' '.$pereNimi.'<br/>';
+echo "Sõidan koolist kesklinna bussiga number".$bussiNumber.'<br/>';
+echo "Midagi konstantset? PI= ".NUMBER_PI."<br/>";

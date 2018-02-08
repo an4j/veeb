@@ -23,13 +23,13 @@ function soogiHind($taisHind, $soodusKaart, $kasOledOpilane){
 
 // kutsume funktsiooni tööle
 // kui oled opilane
-$soogiHind = soogiHind( taishind 2.65, $soodusKaart true, $kasOledOpilane true);
+$soogiHind = soogiHind (taisHind 2.65, $soodusKaart true, $kasOledOpilane true);
 echo 'Prae hind õpilasele = '.round($soogiHind, precision 2 ).'€<br/>';
-// kui olemas kliendikaart
-$soogiHind = soogiHind( taishind 2.65, $soodusKaart true, $kasOledOpilane false);
+// kui olemas kliendikaart, aga ei ole opilane
+$soogiHind = soogiHind (taisHind 2.65, $soodusKaart true, $kasOledOpilane false);
 echo 'Prae hind sooduskaarti omanikule = '.round($soogiHind, precision 2 ).'€<br/>';
 // kui ei ole kliendikaarti
-$soogiHind = soogiHind( taishind 2.65, $soodusKaart false, $kasOledOpilane false);
+$soogiHind = soogiHind (taisHind 2.65, $soodusKaart false, $kasOledOpilane false);
 echo 'Prae hind = '.round($soogiHind, precision 2 ).'€<br/>';
 
 

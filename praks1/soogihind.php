@@ -45,31 +45,35 @@ $kasutajad = array(
 );
 $praed = array(
     array(
-        'prae nimetus' => 'Šnitsel',
-        'prae kirjeldus' => 'Šnitsel sealihast, lisand, kaste, salat, leib',
-        'prae taishind' => '2.58'
+        'nimetus' => 'Šnitsel',
+        'kirjeldus' => 'Šnitsel sealihast, lisand, kaste, salat, leib',
+        'taishind' => '2.58'
     ),
     array(
-        'prae nimetus' => 'Seapraad',
-        'prae kirjeldus' => 'Seapraad, lisand, kaste, salat, leib',
-        'prae taishind' => '2.65'
+        'nimetus' => 'Seapraad',
+        'kirjeldus' => 'Seapraad, lisand, kaste, salat, leib',
+        'taishind' => '2.65'
     ),
     array(
-        'prae nimetus' => 'Hakklihapallid tomatikastmes',
-        'prae kirjeldus' => 'Hakklihapallid, lisand, laste, salat, leib',
-        'prae taishind' => '1.30'
+        'nimetus' => 'Hakklihapallid tomatikastmes',
+        'kirjeldus' => 'Hakklihapallid, lisand, laste, salat, leib',
+        'taishind' => '1.30'
     ),
     array(
-        'prae nimetus' => 'Kalasupp',
-        'prae kirjeldus' => 'Supp, leib',
-        'prae taishind' => '1.25'
+        'nimetus' => 'Kalasupp',
+        'kirjeldus' => 'Supp, leib',
+        'taishind' => '1.25'
     ),
     array(
-        'prae nimetus' => 'Rassolnik',
-        'prae kirjeldus' => 'Supp, hapukoor, leib',
-        'prae taishind' => '1.20'
+        'nimetus' => 'Rassolnik',
+        'kirjeldus' => 'Supp, hapukoor, leib',
+        'taishind' => '1.20'
     )
 );
+for ($praed as $praad){
+    echo $praad'nimetus';
+    echo $praad'kirjeldus';
+}
 // vaatame kasutajate massiivi läbi
 // for on tsükli muutuja defineerija, tingimuse ja kehtivuse kontroll
 foreach ($kasutajad as $kasutaja){

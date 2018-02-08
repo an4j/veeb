@@ -6,6 +6,8 @@
  * Time: 11:28
  */
 // funktsioon soodustuse arvutamiseks
+require_once 'funktsioon.php'; // nõuame ligipääsu failile
+loeVormFailist(failinimi vorm.html)
 function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
     // funktsiooni sisu
     $soodusProtsent = 15; //
@@ -79,6 +81,23 @@ for ($praed as $praad){
 foreach ($kasutajad as $kasutaja){
     foreach ($kasutajad as $voti=>$vaartus){
         // kutsume funktsiooni tööle
-        $soogiHind = sooogiHind( taisHind 2.65, $kasutaja['soodus'], $kasutaja'opilaskaart')};
+        $soogiHind = soogiHind( taisHind 2.65, $kasutaja['soodus'], $kasutaja'opilaskaart')};
     echo 'Prae hind '.$kasutaja['roll'].' = '.round($soogiHind, precision 2).' €<br/>';
+}
+// funktsioon vormi väljastamiseks
+// vorm hoiame vorm.html failis
+// vormi sisu loeme antud failist
+// väljastame
+function loeVormFailist($failinimi){
+    // kontrollime vajaliku faili olemasolu
+    if (file_exists($failinimi) and is_file($failinimi)and is_readable($failinimi)){
+        //saab faili avada
+        Stp = (open ($failinimi, mode 'r');
+        $sisu = fread(Stp, filesize($failinimi));
+        fclose())
+    }else {
+        echo 'Probleem '.$failinimi.'failiga<br/>';
+        exit;
+    }
+    echo $sisu;
 }

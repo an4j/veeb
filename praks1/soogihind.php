@@ -21,27 +21,60 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
     return $soodusHind;
 }// funtktsiooni lõpp
 
-// kutsume funktsiooni tööle
-// kui oled opilane
-$soogiHind = soogiHind( taisHind 2.65, $soodusKaart true, $kasOledOpilane true);
-echo 'Prae hind õpilasele = '.round($soogiHind, precision 2 ).'€<br/>';
-// kui olemas kliendikaart, aga ei ole opilane
-$soogiHind = soogiHind( taisHind 2.65, $soodusKaart true, $kasOledOpilane false);
-echo 'Prae hind sooduskaarti omanikule = '.round($soogiHind, precision 2 ).'€<br/>';
-// kui ei ole kliendikaarti
-$soogiHind = soogiHind( taisHind 2.65);
-echo 'Prae hind = '.round($soogiHind, precision 2 ).'€<br/>';
-
-
-// vajalikud muutujad
-$soogiHind = 2.55; // hind, EUR
-$soodustusProtsent = 15; // %
-$toetus = 1.80; // EUR
-// arvutused
-if ($soogiHind > 0 and $soodustusProtsent > 0 and $toetus > 0) {
-    $soodustus = $soogiHind * $soodustusProtsent / 100;
-    $hindOpilasele = $soodustus - $toetus.'<br/>';
-    echo 'Soogihind opilasele = '.$hindOpilasele.'<br/>';
-} else {
-    echo 'Andmed ei ole taielikud<br/>';
+// testimiseks paneme erinevad väärtused paika, kasutame selleks massiivi (sooduskaart, kasOledOpilane
+// kasutajate tabel (massiivis)
+// esimene õpilased
+// teine õpetajad
+// kolmas külalised
+$kasutajad = array(
+    array(
+        'roll' => 'opilane',
+        'soodus' => true,
+        'opilaskaart' => true
+    ),
+    array(
+        'roll' => 'opetaja',
+        'soodus' => true,
+        'opilaskaart' => false
+    ),
+    array(
+        'roll' => 'kylaline',
+        'soodus' => false,
+        'opilaskaart' => false
+    )
+);
+$praed = array(
+    array(
+        'prae nimetus' => 'Šnitsel',
+        'prae kirjeldus' => 'Šnitsel sealihast, lisand, kaste, salat, leib',
+        'prae taishind' => '2.58'
+    ),
+    array(
+        'prae nimetus' => 'Seapraad',
+        'prae kirjeldus' => 'Seapraad, lisand, kaste, salat, leib',
+        'prae taishind' => '2.65'
+    ),
+    array(
+        'prae nimetus' => 'Hakklihapallid tomatikastmes',
+        'prae kirjeldus' => 'Hakklihapallid, lisand, laste, salat, leib',
+        'prae taishind' => '1.30'
+    ),
+    array(
+        'prae nimetus' => 'Kalasupp',
+        'prae kirjeldus' => 'Supp, leib',
+        'prae taishind' => '1.25'
+    ),
+    array(
+        'prae nimetus' => 'Rassolnik',
+        'prae kirjeldus' => 'Supp, hapukoor, leib',
+        'prae taishind' => '1.20'
+    )
+);
+// vaatame kasutajate massiivi läbi
+// for on tsükli muutuja defineerija, tingimuse ja kehtivuse kontroll
+foreach ($kasutajad as $kasutaja){
+    foreach ($kasutajad as $voti=>$vaartus){
+        // kutsume funktsiooni tööle
+        $soogiHind = sooogiHind( taisHind 2.65, $kasutaja['soodus'], $kasutaja'opilaskaart')};
+    echo 'Prae hind '.$kasutaja['roll'].' = '.round($soogiHind, precision 2).' €<br/>';
 }
